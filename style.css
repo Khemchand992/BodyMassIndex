@@ -1,0 +1,54 @@
+.heading-div{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.lable-height,.lable-weight{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+input{
+    background-color: #4e4949;
+    padding: 5px;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 12px;
+    text-align: center;
+    font-weight: bold;
+
+}
+::placeholder{
+    text-align: right;
+    padding: 10px;
+}
+button{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bolder;
+}
+#bmiresult-div{
+    margin-top: 20px;
+    font-size: 20px;
+}
+td{
+    padding: 10px;
+    border-style: solid;
+    border-color: #4e4949;
+}
+.main-table{
+   padding: 20px;
+   margin: 30px;
+   background-color: #4e4949;
+   color: orange;
+   
+
+}
+.main-table-data{
+    border-style:solid ;
+}
