@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <style>
+                .body{
+                    background-color: #212121;
+                    color: #fff;
+                }
+                
+            </style>
+            
+            <link rel="stylesheet" href="./style.css">
+    </head>
+    <body class="body">
+        <div class="first-div" style="margin-top: 15px;">
+            <div class="heading-div">
+                <h2 style="font-size: 30px;">Check your Status</h2>
+                
+            </div>
+            <div class="heading-div">
+                <img class="image" src="./weight machin img.avif" height="200px" width="400px">
+            </div>
+            <form>
+                <div class="heading-div">
+                    <div class="lable-height">
+                        <lable>Height <input type="text" id="height" placeholder="m"></lable>
+        
+                    </div>
+                </div>
+                <div class="heading-div">
+                    <div class="lable-weight">
+                        <lable>Weight <input id="weight" type="text" placeholder="kg"></lable>
+                        
+                    </div>
+                </div>
+                <div class="heading-div">
+
+                    <div id="bmiresult-div" style="color: white;">
+                    
+                    </div>   
+
+                </div>
+                </div>
+                <div class="heading-div">
+                    <button>submit</button>
+                </div>
+                <div class="heading-div">
+                    <table id="table">
+                        <tr>
+                            <td>Weight Status</td>
+                            <td>Body Mass Index,BMI kg/m<sup>2</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Less than 1805</td>
+                            <td>Underweight</td>
+                        </tr>
+                        <tr>
+                            <td>18.5-24.9</td>
+                            <td>Normal range</td>
+                        </tr>
+                        <tr>
+                            <td>25.0-29.9</td>
+                            <td>Overweight</td>
+                        </tr>
+                        <tr>
+                            <td>Grater than 30</td>
+                            <td>Obese</td>
+                        </tr>
+                    </table>
+                </div>
+                
+            </form>
+
+        </div>
+    </body>
+    <script>
+        const form =document.querySelector('form')
+
+        form.addEventListener('submit', function(e){
+        e.preventDefault()
+        const height = parseInt(document.querySelector('#height').value);
+        const weight = parseInt(document.querySelector('#weight').value)
+        const bmiResult = document.querySelector('#bmiresult-div')
+        if(height==='' || height<=0 || height===NaN){
+        bmiResult.innertext='Please Enter valid height';
+        }
+        if(weight==='' || weight<=0 || weight===NaN){
+        bmiResult.innerText='Please Enter valid weight';
+        }else{
+           const bmi=(weight/(height*height));
+            bmiResult.innerHTML=bmi;
+        }
+    
+    })
+    </script>
+</html>
